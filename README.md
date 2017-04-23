@@ -157,13 +157,16 @@ In my first attempt, I purposefully collected data by driving car in zig-zag man
 
 Having a good dataset is very critical for training a neural network. To capture good driving behavior, I first recorded two laps on track one by strictly following center lane driving
 
-Left Camera
+**Left Camera**
+
 ![Left Camera](./images/left_camera.jpg)
 
-Center Camera
+**Center Camera**
+
 ![Center Camera](./images/center_image.jpg)
 
-Right Camera
+**Right Camera**
+
 ![Right Camera](./images/right_camera.jpg)
 
 
@@ -184,7 +187,9 @@ Below histogram shows the data distribution for the steering angle, it is very o
 ![Histogram](./images/histogram_original_dataset.png)
 
 > Udacity's Dataset
+>
 > Total samples 8037
+>
 > No. of samples with 0 steering angle 3675
 
 I executed the below Shell command to randomly strip off data samples with 0 steering angle. Within the model bootstrap (model.py ln# 193, 194) I double the number of samples to increase the amount of training data. With random image augmentation the training will have a enough amount of varied samples.
@@ -251,4 +256,4 @@ Below is the recording from the working setup.
 Recorded Video
 ```
 
-[![Video](./video.mp4)]
+![Video](./video.mp4)
