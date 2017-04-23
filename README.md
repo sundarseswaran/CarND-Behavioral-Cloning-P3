@@ -153,7 +153,7 @@ _________________________________________________________________
 
 In my first attempt, I purposefully collected data by driving car in zig-zag manner hoping there will be more data points with non-zero steering angle and the model would strive to stick to the center always. However, I was proved otherwise as the car started to circle around continuously, as you see in the video below;
 
-![video here.](http://img.youtube.com/vi/XlR6suUvaVE/0.jpg)](http://www.youtube.com/watch?v=XlR6suUvaVE)
+[![video here.](http://img.youtube.com/vi/XlR6suUvaVE/0.jpg)](http://www.youtube.com/watch?v=XlR6suUvaVE)]
 
 Having a good dataset is very critical for training a neural network. To capture good driving behavior, I first recorded two laps on track one by strictly following center lane driving
 
