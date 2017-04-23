@@ -29,17 +29,17 @@ This project includes the following files & folders
 >
 > model.py => CNN Model based on Keras 2 API
 >
-> model.h5 => Compiled model
+> model.h5.txt => Compiled model, link to [google drive](https://drive.google.com/file/d/0B2q8atV_JIOnTDVKWWZUR244NzA/view?usp=sharing)
 >
 > model.png => Keras model visualization
 >
 > drive.py => Original file from Udacity to drive autonomously in the simulator.  Not changed.
 >  
-> video.mp4 => YouTube Link [https://youtu.be/QxI3tvIn0Ms](https://youtu.be/QxI3tvIn0Ms)
+> video.mp4
 >
 > video.py  => Original file from Udacity. Not modified.
 
---
+---
 
 
 ### Model Architecture and Training Strategy
@@ -151,11 +151,20 @@ _________________________________________________________________
 
 #### 3. Creation of the Training Set
 
-In my first attempt, I purposefully collected data by driving car in zig-zag manner hoping there will be more data points with non-zero steering angle and the model would strive to stick to the center always. However, I was proved otherwise as the car started to circle around continuously, as you see in the ![video here.](http://img.youtube.com/vi/XlR6suUvaVE/1.jpg)](http://www.youtube.com/watch?v=XlR6suUvaVE)
+In my first attempt, I purposefully collected data by driving car in zig-zag manner hoping there will be more data points with non-zero steering angle and the model would strive to stick to the center always. However, I was proved otherwise as the car started to circle around continuously, as you see in the video below;
+
+![video here.](http://img.youtube.com/vi/XlR6suUvaVE/0.jpg)](http://www.youtube.com/watch?v=XlR6suUvaVE)
 
 Having a good dataset is very critical for training a neural network. To capture good driving behavior, I first recorded two laps on track one by strictly following center lane driving
 
-![Left Camera](./images/left_camera.jpg)![Center Camera](./images/center_image.jpg)![Right Camera](./images/right_camera.jpg)
+Left Camera
+![Left Camera](./images/left_camera.jpg)
+
+Center Camera
+![Center Camera](./images/center_image.jpg)
+
+Right Camera
+![Right Camera](./images/right_camera.jpg)
 
 
 I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to swerve back to the center of the lane if it gets drifted. Below are some of of the samples.
@@ -172,7 +181,7 @@ I also have taken recommendations from attempted recommendations from [David](ht
 
 Below histogram shows the data distribution for the steering angle, it is very obvious that there is a very large number of sample for zero steering angle (0.0), when compared to the other values. We have have to trim the dataset to normalize the number samples across the steering angles.
 
-[Histogram](./images/histogram_original_dataset.png)
+![Histogram](./images/histogram_original_dataset.png)
 
 > Udacity's Dataset
 > Total samples 8037
@@ -239,10 +248,7 @@ Below is the recording from the working setup.
 
 
 ```
-YouTube - video.mp4 - Click to play
+Recorded Video
 ```
 
-![Video](./video.mp4)
-
-
-=== [[video.mp4](http://img.youtube.com/vi/QxI3tvIn0Ms/maxresdefault.jpg)](http://www.youtube.com/watch?v=QxI3tvIn0Ms)
+[![Video](./video.mp4)]
